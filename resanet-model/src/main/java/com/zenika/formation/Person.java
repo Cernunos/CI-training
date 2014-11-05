@@ -4,7 +4,7 @@ package com.zenika.formation;
 public class Person
 {
 
-	private String names;
+	private String name;
 	
 	private String firstName;
 
