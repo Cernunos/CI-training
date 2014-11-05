@@ -46,6 +46,7 @@
 
    <build>
      <plugins>
+	 
 		<plugin>
 			<artifactId>maven-compiler-plugin</artifactId>
             <version>2.5.1</version>
@@ -54,7 +55,45 @@
 				<target>1.5</target>
 			</configuration>
 		</plugin>
+		
+		<plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>2.3</version>
+			<configuration>
+			<descriptors>
+				<descriptor>src/assembly/packaging.xml</descriptor>
+			</descriptors>
+			</configuration>
+		</plugin>
+
 	</plugins> 
    </build>
+   
+	<scm>
+		<developerConnection>scm:git:file:///C:/Users/rformation/tp1/tp1/gitserver/</developerConnection>
+	</scm>
+
+	<profiles>
+		<profile>
+			<id>private</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-scm-plugin</artifactId>
+						<version>1.8</version>
+						<inherited>false</inherited>
+						<executions>
+							<execution>
+								<goals>
+									<goal>update</goal>
+								</goals>
+								<phase>validate</phase>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
