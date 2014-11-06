@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.zenika.formation</groupId>
-	<artifactId>resanet-parent</artifactId>
-	<packaging>pom</packaging>
-	<version>1.0</version>
-	<name>resanet-parent</name>
-	<modules>
-		<module>resanet-model</module>
-		<module>resanet-web</module>
-		<module>resanet-ear</module>
-	</modules>
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.zenika.formation</groupId>
+   <artifactId>resanet-parent</artifactId>
+   <packaging>pom</packaging>
+   <version>1.0-SNAPSHOT</version>
+   <name>resanet-parent</name>
+   <modules>
+      <module>resanet-model</module>
+      <module>resanet-web</module>
+      <module>resanet-ear</module>
+  </modules>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
    <dependencyManagement>
      <dependencies>
@@ -44,8 +44,8 @@
      </dependencies>
    </dependencyManagement>
 
-	<build>
-	<plugins>
+   <build>
+     <plugins>
 	 
 		<plugin>
 			<artifactId>maven-compiler-plugin</artifactId>
@@ -67,24 +67,12 @@
 		</plugin>
 
 	</plugins> 
-	</build>
+   </build>
    
 	<scm>
 		<developerConnection>scm:git:file:///C:/Users/rformation/tp1/tp1/gitserver/</developerConnection>
-		<tag>resanet-parent-1.0</tag>
 	</scm>
 
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<url>http://localhost:8081/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-	
 	<profiles>
 		<profile>
 			<id>private</id>
